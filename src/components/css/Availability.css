@@ -1,0 +1,114 @@
+.email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.email .form {
+  width: 100%;
+  margin: 0;
+  padding: 2vh;
+  -ms-grid-rows: (19vh)[2] 10vh;
+      grid-template-rows: repeat(2, 19vh) 10vh;
+}
+
+@media (max-width: 1200px) {
+  .email .form {
+    -ms-grid-rows: (19vh)[2] 15vh;
+        grid-template-rows: repeat(2, 19vh) 15vh;
+  }
+}
+
+.email .form .wrapper-info {
+  height: 11vh;
+}
+
+.summary {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 27% 27% 20% auto;
+      grid-template-rows: 27% 27% 20% auto;
+  background-color: #d8d0bf;
+  padding: 2vh;
+}
+
+@media (max-width: 1200px) {
+  .summary {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 15vw;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 851px) {
+  .summary {
+    -ms-grid-rows: 27% 27% 20% auto;
+        grid-template-rows: 27% 27% 20% auto;
+  }
+}
+
+@media (max-height: 450px) {
+  .summary {
+    -ms-grid-rows: 35% 30% 10% auto;
+        grid-template-rows: 35% 30% 10% auto;
+  }
+}
+
+.summary__content {
+  font-family: "Cardo", "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-size: 0.886rem;
+}
+
+.summary__availability {
+  border-bottom: 0.04rem solid #a7beae;
+  margin-bottom: 2vh;
+}
+
+.summary__availability-icons {
+  font-size: 0.4rem;
+}
+
+.summary__availability-icons .icon {
+  margin-right: 0.04rem;
+}
+
+.summary__room {
+  border-bottom: 0.04rem solid #a7beae;
+  margin-bottom: 2vh;
+}
+
+.summary__total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.summary__total-title {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.9rem;
+  text-align: end;
+}
+
+.summary__total-price {
+  font-size: 0.966rem;
+  text-align: end;
+}
+
+.summary__information-content {
+  margin-top: 1vh;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+/*# sourceMappingURL=Availability.css.map */

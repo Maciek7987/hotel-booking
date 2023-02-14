@@ -1,0 +1,198 @@
+@import "./variables.scss";
+
+.book-popup-content {
+  width: 40%;
+  height: 90%;
+  margin: auto;
+  background: rgb(255, 255, 255);
+  border: 0.04rem solid $main-color-medium;
+  @media (max-width: 851px) {
+    width: 60%;
+    height: 95%;
+  }
+  @media (max-width: 700px) {
+    width: 80%;
+  }
+  // @media (max-height: 450px) {
+  //   width: 60%;
+  //   height: 95%;
+  // }
+}
+.book-popup-arrow {
+  color: rgb(255, 255, 255);
+}
+[role="tooltip"].book-popup-content {
+  width: 10.42vw;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 0.125rem;
+}
+
+.book-popup-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+[data-popup="tooltip"].book-popup-overlay {
+  background: transparent;
+}
+
+.more-details {
+  position: absolute;
+  bottom: 2vh;
+  padding: 1vh 1vw;
+  background: transparent;
+  border: 0.04rem solid $main-color-medium;
+  font-size: 0.68rem;
+  font-family: $third-font;
+  font-weight: 400;
+  transition: background-color 0.4s ease;
+  @media (max-width: 420px) {
+    bottom: 10vh;
+    font-size: 0.6rem;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: #fff;
+  }
+}
+.modal {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5vh 1fr;
+  position: relative;
+  height: 100%;
+  padding: 1vh 0.5vw;
+  background-color: rgb(216, 208, 191);
+  font-family: $secondary-font;
+  font-weight: 500;
+  &__header {
+    h3 {
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 3vh;
+      font-size: 1rem;
+      text-align: center;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 38vh 1fr 50vh;
+    &-gallery {
+      position: relative;
+      grid-row: 1/2;
+      background-size: cover;
+      background-position: center 58%;
+      filter: contrast(115%);
+      &-btn-arrow {
+        position: absolute;
+        top: 50%;
+        background: transparent;
+        border: none;
+        width: 3.25vw;
+        height: 8vh;
+        opacity: 0.7;
+        margin: 0 0.5vw;
+        transform: translateY(-50%);
+
+        img {
+          pointer-events: none;
+          width: 90%;
+          height: 100%;
+          background: rgba(255, 255, 255, 0.242);
+          transition: background-color 0.3s ease;
+        }
+        &:hover img {
+          background-color: rgba(255, 255, 255, 0.566);
+        }
+      }
+      #btn-left-details {
+        left: 0;
+      }
+      #btn-right-details {
+        right: 0;
+      }
+    }
+    &-paragraph {
+      padding: 1.5vh 0.5vw;
+      font-size: 0.733rem;
+      align-self: center;
+    }
+    &-caption {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(4, 5vh);
+      align-items: center;
+      justify-content: center;
+      li {
+        display: grid;
+        grid-template-columns: 12% 85%;
+        width: 100%;
+        padding-left: 4%;
+        list-style: none;
+        align-items: center;
+        justify-content: center;
+      }
+      li:nth-child(even) {
+        padding-left: 15%;
+      }
+      &-icon {
+        width: 75%;
+        align-self: center;
+        @media (max-width: 700px) {
+          width: 50%;
+        }
+      }
+      &-specification {
+        font-size: 0.708rem;
+        align-self: center;
+        @media (max-width: 700px) {
+          font-size: 0.63rem;
+        }
+      }
+    }
+  }
+  &__actions {
+    position: absolute;
+    left: 50%;
+    bottom: 2vh;
+    width: 100%;
+    padding: 0.93vh 0.2vw;
+    transform: translateX(-50%);
+    text-align: center;
+    &-more-details {
+      padding: 0.9vh 0.8vw;
+      background: transparent;
+      border: 0.04rem solid $main-color-medium;
+      font-family: $third-font;
+      font-weight: 400;
+      font-size: 0.566rem;
+      transition: background-color 0.4s ease;
+      &:hover {
+        cursor: pointer;
+        background-color: #fff;
+      }
+    }
+  }
+
+  &__close {
+    display: block;
+    position: absolute;
+    right: 0.5vw;
+    top: 1vh;
+    height: 3.5vh;
+    background: transparent;
+    border: none;
+    text-align: center;
+    transition: background-color 0.4s ease;
+    img {
+      width: 100%;
+      height: 100%;
+      padding: 0.6vh 0.3vw;
+    }
+    &:hover {
+      cursor: pointer;
+      background: #fff;
+    }
+  }
+}
