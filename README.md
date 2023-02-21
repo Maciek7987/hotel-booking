@@ -1,3 +1,15 @@
+## Information about project
+
+A sub page from entire project of hotel SPA.
+I wrote algorithm, which based on a user choses, showing not avaialbe termins in calendar. Then, after click a day, range of booking since of this day can't cross disables days. 
+
+
+## Libraries
+
+- react-calendar 3.7.0
+- reactjs-popup 2.0.5
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
